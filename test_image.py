@@ -5,7 +5,7 @@ from scipy.io import loadmat
 from types import SimpleNamespace
 
 # test on a given image
-def segmentation_test(test_image_name, options):
+def segmentation_test(test_image_name, segmentation_module, options):
     dataset_test = TestDataset([{'fpath_img': test_image_name}], options, max_sample=-1)
 
     batch_data = dataset_test[0]
