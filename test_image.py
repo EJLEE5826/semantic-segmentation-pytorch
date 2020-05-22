@@ -1,3 +1,4 @@
+import torch
 from dataset import TestDataset
 from utils import colorEncode
 from scipy.io import loadmat
