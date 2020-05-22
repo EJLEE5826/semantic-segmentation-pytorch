@@ -13,7 +13,7 @@ def segmentation_test(test_image_name):
 
     scores = torch.zeros(1, options.num_class, segSize[0], segSize[1])
     if torch.cuda.is_available():
-    scores = scores.cuda()
+        scores = scores.cuda()
 
     for img in img_resized_list:
     feed_dict = batch_data.copy()
