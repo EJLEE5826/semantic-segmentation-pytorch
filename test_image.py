@@ -16,10 +16,10 @@ def segmentation_test(test_image_name):
         scores = scores.cuda()
 
     for img in img_resized_list:
-    feed_dict = batch_data.copy()
-    feed_dict['img_data'] = img
-    del feed_dict['img_ori']
-    del feed_dict['info']
+        feed_dict = batch_data.copy()
+        feed_dict['img_data'] = img
+        del feed_dict['img_ori']
+        del feed_dict['info']
     if torch.cuda.is_available():
         feed_dict = {k: o.cuda() for k, o in feed_dict.items()}
 
